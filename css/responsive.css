@@ -1,0 +1,389 @@
+/* Responsive Design - Media Queries */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    :root {
+        --spacing-lg: 1rem;
+        --spacing-xl: 1.5rem;
+        --font-size-2xl: 1.25rem;
+        --font-size-3xl: 1.5rem;
+    }
+
+    body {
+        font-size: var(--font-size-sm);
+    }
+
+    h1 { font-size: var(--font-size-3xl); }
+    h2 { font-size: var(--font-size-2xl); }
+    h3 { font-size: var(--font-size-xl); }
+
+    main {
+        flex-direction: column;
+    }
+
+    #page-container {
+        padding: var(--spacing-md);
+    }
+
+    /* Grid adjustments */
+    .grid-cols-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-cols-auto {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    /* Sidebar layout for tablets */
+    .sidebar-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
+
+    .sidebar-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+    }
+
+    .sidebar-nav-item {
+        flex: 0 1 calc(50% - var(--spacing-sm));
+        margin-bottom: 0;
+    }
+
+    .sidebar-nav-link {
+        text-align: center;
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    /* Card adjustments */
+    .card {
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+
+    /* Form adjustments */
+    form {
+        max-width: 100%;
+        padding: var(--spacing-lg);
+    }
+
+    /* Table adjustments */
+    table {
+        font-size: var(--font-size-sm);
+    }
+
+    th, td {
+        padding: var(--spacing-sm);
+    }
+
+    /* Button adjustments */
+    .btn {
+        width: 100%;
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+
+    .card-footer {
+        flex-direction: column;
+    }
+
+    .card-footer .btn {
+        width: 100%;
+    }
+
+    /* Modal adjustments */
+    .modal-content {
+        width: 95%;
+        max-width: 90vw;
+    }
+
+    /* Flex utilities */
+    .flex-between {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+    }
+
+    /* Container adjustments */
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    :root {
+        --spacing-md: 0.75rem;
+        --spacing-lg: 1rem;
+        --spacing-xl: 1.25rem;
+        --font-size-xl: 1.125rem;
+        --font-size-2xl: 1.25rem;
+        --font-size-3xl: 1.5rem;
+        --font-size-4xl: 1.875rem;
+    }
+
+    body {
+        font-size: var(--font-size-sm);
+    }
+
+    h1 { font-size: var(--font-size-2xl); }
+    h2 { font-size: var(--font-size-xl); }
+    h3 { font-size: var(--font-size-lg); }
+
+    #navbar {
+        padding: var(--spacing-sm);
+    }
+
+    #page-container {
+        padding: var(--spacing-sm);
+    }
+
+    /* Grid adjustments */
+    .grid-cols-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-cols-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-cols-auto {
+        grid-template-columns: 1fr;
+    }
+
+    .grid {
+        gap: var(--spacing-md);
+    }
+
+    /* Sidebar */
+    .sidebar-nav {
+        flex-direction: column;
+    }
+
+    .sidebar-nav-item {
+        flex: 1;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    /* Card adjustments */
+    .card {
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .card-header {
+        padding-bottom: var(--spacing-sm);
+        margin-bottom: var(--spacing-sm);
+    }
+
+    /* Form adjustments */
+    form {
+        padding: var(--spacing-md);
+        max-width: 100%;
+    }
+
+    .form-group {
+        margin-bottom: var(--spacing-md);
+    }
+
+    /* Button adjustments */
+    .btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        width: 100%;
+        font-size: var(--font-size-sm);
+    }
+
+    button {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    /* Table adjustments */
+    table {
+        font-size: var(--font-size-xs);
+    }
+
+    th, td {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    /* Text utilities */
+    .text-small {
+        font-size: var(--font-size-xs);
+    }
+
+    /* Card footer */
+    .card-footer {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .card-footer .btn {
+        width: 100%;
+    }
+
+    /* Modal */
+    .modal-content {
+        width: 98%;
+        max-width: 98vw;
+        padding: var(--spacing-md);
+    }
+
+    /* Notification */
+    .notification {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--font-size-sm);
+    }
+
+    /* Empty state */
+    .empty-state {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+
+    .empty-state-icon {
+        font-size: 2.5rem;
+    }
+
+    /* Margin utilities */
+    .mt-sm { margin-top: var(--spacing-xs); }
+    .mt-md { margin-top: var(--spacing-sm); }
+    .mt-lg { margin-top: var(--spacing-md); }
+
+    .mb-sm { margin-bottom: var(--spacing-xs); }
+    .mb-md { margin-bottom: var(--spacing-sm); }
+    .mb-lg { margin-bottom: var(--spacing-md); }
+
+    /* Typography */
+    p {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    /* Container */
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    /* Flex utilities for mobile */
+    .flex-between {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .flex-center {
+        flex-direction: column;
+    }
+
+    /* Badge adjustments */
+    .badge {
+        font-size: var(--font-size-xs);
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+}
+
+/* Large screens (1024px and above) */
+@media (min-width: 1024px) {
+    .grid-cols-auto {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .sidebar {
+        position: sticky;
+        top: 100px;
+    }
+
+    .card {
+        transition: all var(--transition-normal);
+    }
+
+    .card:hover {
+        box-shadow: var(--shadow-xl);
+        transform: translateY(-6px);
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background-color: var(--bg-primary);
+    }
+
+    .no-print,
+    #navbar,
+    button,
+    .btn {
+        display: none !important;
+    }
+
+    .card {
+        box-shadow: none;
+        border: 1px solid var(--border-color);
+        page-break-inside: avoid;
+    }
+
+    table {
+        border: 1px solid var(--border-color);
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+/* Dark mode (optional - can be toggled via JS) */
+@media (prefers-color-scheme: dark) {
+    :root.dark-mode {
+        --text-primary: #f3f4f6;
+        --text-secondary: #d1d5db;
+        --text-light: #9ca3af;
+        --bg-primary: #1f2937;
+        --bg-secondary: #111827;
+        --bg-tertiary: #374151;
+        --border-color: #4b5563;
+        --border-light: #374151;
+    }
+
+    :root.dark-mode body {
+        background-color: var(--bg-secondary);
+        color: var(--text-primary);
+    }
+
+    :root.dark-mode .card,
+    :root.dark-mode form,
+    :root.dark-mode table {
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+    }
+
+    :root.dark-mode input[type="text"],
+    :root.dark-mode input[type="email"],
+    :root.dark-mode input[type="password"],
+    :root.dark-mode input[type="number"],
+    :root.dark-mode input[type="date"],
+    :root.dark-mode input[type="tel"],
+    :root.dark-mode select,
+    :root.dark-mode textarea {
+        background-color: var(--bg-tertiary);
+        color: var(--text-primary);
+        border-color: var(--border-color);
+    }
+}
