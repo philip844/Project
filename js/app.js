@@ -8,8 +8,11 @@ class RentalManagementApp {
     /**
      * Initialize the application
      */
-    init() {
+    async init() {
         console.log('Initializing Rental Management System...');
+
+        // Seed database first (if not already seeded)
+        await seedDatabase();
 
         // Register all routes
         registerRoutes();
@@ -212,7 +215,10 @@ const app = new RentalManagementApp();
 
 // Initialize app when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    app.init();
+    app.init().catch(err => {
+        console.error('Failed to initialize app:', err);
+        alert('Error initializing application. Please refresh the page.');
+    });
 });
 
 // Add CSS for navbar

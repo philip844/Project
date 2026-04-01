@@ -538,10 +538,7 @@ function createSampleApplications() {
     console.log('Created sample applications');
 }
 
-// Auto-seed database on page load
-document.addEventListener('DOMContentLoaded', () => {
-    seedDatabase();
-});
+// Database will be seeded by app.js during initialization
 
 /**
  * Manual seed function (can be called from console)
